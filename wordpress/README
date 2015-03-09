@@ -1,0 +1,6 @@
+build like:
+	docker build -t jwalkertrumble/wp-nginx:base .
+
+run like:
+	docker run --name wp-nginx -p 80:80 -p 5000:22 --link mysql-wp:mysql-wp -d jwalkertrumble/wp-nginx:base
+
