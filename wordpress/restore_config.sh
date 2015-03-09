@@ -18,4 +18,4 @@ tar xf /tmp/backup/docker_svc-cfg_backup.tar
 rm -f /etc/nginx/sites-enabled/default 
 tar zxf /tmp/backup/docker_blog_backup.tar.gz
 tar xf /tmp/backup/docker_backup_scripts.tar
-echo "0 1 * * Mon /usr/sbin/blog-backup" > /var/spool/cron/root
+echo "0 1 * * Mon /usr/sbin/blog-backup" > /var/spool/cron/crontabs/root

@@ -70,7 +70,7 @@ ADD restore_config.sh /tmp/
 RUN /tmp/restore_config.sh
 
 # Set services to autostart
-RUN update-rc.d nginx defaults && update-rc.d php5-fpm defaults && update-rc.d crond defaults
+RUN update-rc.d nginx defaults && update-rc.d php5-fpm defaults && update-rc.d cron defaults
 
 # Cleanup
 RUN rm -rf /tmp/backup /tmp/restore_config.sh
