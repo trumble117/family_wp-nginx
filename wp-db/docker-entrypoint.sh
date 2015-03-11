@@ -1,5 +1,4 @@
-#!/bin/bash
-set -e
+et -e
 
 if [ "${1:0:1}" = '-' ]; then
 	set -- mysqld "$@"
@@ -17,7 +16,7 @@ if [ "$1" = 'mysqld' ]; then
 		fi
 		
 		echo 'Running mysql_install_db ...'
-		mysql_install_db --datadir="$DATADIR" --mysqld-file="$(which "$1")"
+		mysql_install_db --datadir="$DATADIR"
 		echo 'Finished mysql_install_db'
 		
 		# These statements _must_ be on individual lines, and _must_ end with
