@@ -1,8 +1,8 @@
 build like:
-	docker build -t jwalkertrumble/mysql-wp:5.7 .
+	docker build -t jwalkertrumble/mysql-wp:5.6 .
 
 run like:
-	docker run --name mysql-wp -p 3306:3306 -e MYSQL_ROOT_PASSWORD=besA4aBr -e MYSQL_DATABASE=wordpress_nginx -e MYSQL_USER=wp_dbadmin -e MYSQL_PASSWORD=besA4aBr -d jwalkertrumble/mysql-wp:5.7
+	docker run --name mysql-wp -p 3306:3306 -e MYSQL_ROOT_PASSWORD=besA4aBr -e MYSQL_DATABASE=wordpress_nginx -e MYSQL_USER=wp_dbadmin -e MYSQL_PASSWORD=besA4aBr -d jwalkertrumble/mysql-wp:5.6
 
 import data like:
 	mysql --protocol=tcp -u wp_dbadmin --password=besA4aBr wordpress_nginx < wpdb_backup.sql
