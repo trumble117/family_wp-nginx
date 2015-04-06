@@ -40,6 +40,9 @@ RUN sed -ri 's/^session\s+required\s+pam_loginuid.so$/session optional pam_login
 
 RUN sed -ri 's/^PermitRootLogin\s+.*/PermitRootLogin yes/' /etc/ssh/sshd_config
 
+# fix for cron, too
+RUN sed -ri 's/^session\s+required\s+pam_loginuid.so$/session optional pam_loginuid.so/' /etc/pam.d/crond
+
 # let Upstart know it's in a container
 ENV container docker
 
